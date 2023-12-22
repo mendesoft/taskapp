@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="449.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.mendesoft.controller.IndexController">
+   <children>
+      <Label layoutX="253.0" layoutY="14.0" prefHeight="62.0" prefWidth="199.0" text="System of Tasks" textFill="#686161">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <TableView fx:id="taskTable" layoutX="283.0" layoutY="95.0" onMouseClicked="#loadTaskForm" onSort="#updateTask" prefHeight="227.0" prefWidth="372.0">
+        <columns>
+          <TableColumn fx:id="idTaskColumn" prefWidth="56.0" text="ID" />
+          <TableColumn fx:id="nameTaskColumn" prefWidth="94.0" text="Task" />
+            <TableColumn fx:id="responsibleColumn" prefWidth="75.0" text="Responsible" />
+            <TableColumn fx:id="statusColumn" prefWidth="132.0" text="Status" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="29.0" layoutY="111.0" prefHeight="227.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" text="Task" textFill="#5b4ada">
+               <font>
+                  <Font name="Algerian" size="12.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="83.0" text="Responsible" textFill="#5b4ada">
+               <font>
+                  <Font name="Algerian" size="12.0" />
+               </font></Label>
+            <Label layoutX="22.0" layoutY="133.0" text="Status" textFill="#5b4ada">
+               <font>
+                  <Font name="Algerian" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtTask" layoutX="13.0" layoutY="42.0" />
+            <TextField fx:id="txtResponsible" layoutX="13.0" layoutY="100.0" />
+            <TextField fx:id="txtStatus" layoutX="13.0" layoutY="150.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="48.0" layoutY="339.0" prefHeight="62.0" prefWidth="591.0">
+         <children>
+            <Button fx:id="btnSave" layoutX="161.0" layoutY="20.0" mnemonicParsing="false" onAction="#addTask" text="Save" textFill="#ae1717">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="228.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateTask" text="Update" textFill="#ae1717">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDekete" layoutX="309.0" layoutY="18.0" mnemonicParsing="false" onAction="#deleteTask" text="Delete" textFill="#ae1717">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClean" layoutX="384.0" layoutY="18.0" mnemonicParsing="false" onAction="#cleanForm" text="Clean" textFill="#ae1717">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
